@@ -14,4 +14,6 @@ RUN npm run build
 #/app/build/ contains all teh stuff we need
 
 FROM nginx
+#for elastic beanstalk for incoming traffic
+EXPOSE 80 
 COPY --from=builder /app/build /usr/share/nginx/html
